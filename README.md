@@ -32,6 +32,7 @@ Se ha priorizado la claridad del código y la eficiencia en la manipulación de 
 /reto-tecnico/
 │── script.py  # Código principal que procesa los datos
 │── datos.csv  # Archivo de entrada con los datos de transacciones
+│── cli.py     # Archivo de entrada desde linea de comando (CLI)
 │── README.md  # Documentación del proyecto
 ```
 
