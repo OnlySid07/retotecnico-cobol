@@ -24,7 +24,6 @@ def procesar_csv(archivo):
         print("\nReporte de transacciones")
         print("----------------------")
         #Balance final
-
         print(f"")
         print(f"Balance final: {balance:.2f}")
         print(f"Transacción de Mayor Monto: ID {id_mayor} con monto {monto_mayor:.2f}")
@@ -42,7 +41,7 @@ def procesar_csv(archivo):
     except Exception :
         print(f"Error inesperado: Error al procesar el archivo '{archivo}'.")
         sys.exit(1)
-        
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Procesador de transacciones bancarias desde un CSV.")
     parser.add_argument("archivo", help="Ruta del archivo CSV a procesar")
