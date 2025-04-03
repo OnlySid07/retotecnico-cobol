@@ -14,13 +14,11 @@ def procesar_csv(archivo):
         
         # Conteo de transacciones por tipo
         conteo_tipos = df['tipo'].value_counts().to_dict()
-        
+
        #Estamos buacando el conteo de transacciones por tipo, que son credito y debito 
        #Obteniendo su monto si es creito o debito y con el metodo .sum() sumamos los montos
        #Segun el filtro si es credito o debito
         balance = df.loc[df['tipo']=='Crédito', 'monto'].sum() - df.loc[df['tipo']=='Débito', 'monto'].sum()
-
-        
 
         # Mostrar el reporte
         print("\nReporte de transacciones")
@@ -41,7 +39,10 @@ def procesar_csv(archivo):
     except KeyError:
         print("Error: El archivo CSV no contiene las columnas esperadas ('id', 'tipo', 'monto').")
         sys.exit(1)
-
+    except Exception :
+        print(f"Error inesperado: Error al procesar el archivo '{archivo}'.")
+        sys.exit(1)
+        
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Procesador de transacciones bancarias desde un CSV.")
     parser.add_argument("archivo", help="Ruta del archivo CSV a procesar")

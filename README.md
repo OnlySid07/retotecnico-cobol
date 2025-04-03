@@ -36,6 +36,16 @@ Se ha priorizado la claridad del código y la eficiencia en la manipulación de 
 │── README.md  # Documentación del proyecto
 ```
 
+## Formato del Archivo CSV
+```csv
+id,tipo,monto
+1,Crédito,100.00
+2,Débito,50.00
+3,Crédito,200.00
+4,Débito,75.00
+5,Crédito,150.00
+```
+
 ## Documentación y Calidad del Código
 El código ha sido diseñado para ser claro y legible. Se han utilizado comentarios explicativos en las secciones clave del código para facilitar su comprensión. Además, se han aplicado buenas prácticas como:
 - Uso de `try-except` para manejar errores en la lectura del archivo CSV.
